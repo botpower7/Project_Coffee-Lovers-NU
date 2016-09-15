@@ -1,0 +1,16 @@
+@import url(../css/font.css);
+@import url(../css/styleadmin.css);
+@import url(../css/header.css);
+.imgmenu {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 200px;
+}
