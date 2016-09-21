@@ -6,17 +6,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet" charset="utf-8">
-    <link href="./css/style2.css" rel="stylesheet" charset="utf-8">
-    <link rel="icon" type="image/png" href="./images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Damion|Yellowtail|Yesteryear" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/logonew.png">
 </head>
 <header>
     <div class="container " id="welcome">
         <div class="intro-text">
             <div class="intro-heading">Welcome To</div>
-            <div class="intro-lead-in">Coffee Lovers@NU</div>
-            <a href="#about" class="button page-scroll btn btn-xl">Go Go</a>
+            <div class="intro-lead-in text-head">Coffee Lovers@NU</div>
+            <a href="#menu" class="button page-scroll btn btn-xl gomenu">View Menu</a>
         </div>
     </div>
 </header>
@@ -27,24 +27,22 @@
             <div class="container">
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navTop">
-                        <span class="sr-only">Toggle navigation</span> Menu
+                        <span class="sr-only nav-font-tag">Toggle navigation</span>
+                        <p class="nav-font-tag">Menu</p>
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#welcome">Coffee Lovers NU</a>
+                    <a class="navbar-brand page-scroll nav-font" href="#welcome">Coffee Lovers NU</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navTop">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden">
-                            <a href="#welcome"></a>
+                        <li>
+                            <a class="page-scroll nav-font-tag" href="#about">About</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">About</a>
+                            <a class="page-scroll nav-font-tag" href="#menu">Menu</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#menu">Menu</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#contact">Contact</a>
+                            <a class="page-scroll nav-font-tag" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -54,379 +52,118 @@
     <section class="about" id="about">
         <div class="container">
             <h1>ABOUT</h1>
-            <p>ถ้าคุณต้องการของหวาน ร้านเรามีคำตอบ และเมนูอื่นๆอีกมากมายให้เลือกรับประทาน เช่น สเต็ก กาแฟ ช็อคโกแล้ตลาวา ปังปิ้ง ฮันนี่โทส ผักขมอบชีส</p>
-            <p>*เมนูแนะนำ “มาม่านรกแตก” By. Coffee Lover NU ร้านที่มีแต่ของอร่อย</p>
-            <p>เปิด-ปิด เวลา 11.00-22.00 น.ร้านเราเปิดทุกวัน ทางร้านเรามีบริการ Delivery รอบ ม.นเรศวร **สั่ง 5 แก้วขึ้นไป ส่งฟรี</p>
+            <div class="col-md-6">
+                <p class="about1">ถ้าคุณกำลังมองหาร้านกาแฟที่มีบรรยากาศดีๆ ชิคๆ มีกาแฟเกรดคุณภาพ ของหวานถูกปาก อาหารอร่อย ต้องที่ Coffee Lovers NU ร้านเรามีคำตอบ</p>
+                <p class="about1">ทางร้านเรามีเมนูมากมายให้เลือกรับประทาน เช่น กาแฟ ช็อคโกแลตลาวา ขนมปังปิ้ง ฮันนี่โทส ผักขมอบชีส สเต็ก</p>
+                <p class="about1">ร้านเราคัดเลือกวัตถุดิบที่สะอาด สดใหม่ทุกวัน มีคุณภาพที่ดี มาใช้ในการประกอบเมนูอาหาร</p>
+            </div>
+            <div class="col-md-6">
+                <p class="about2">Coffee Lovers NU ร้านที่มีแต่ของอร่อย</p>
+                <p class="about2">เปิดบริการทุกวัน ตั้งแต่เวลา 11.00น.-22.00น. </p>
+                <p class="about2">มีบริการ Delivery รอบ ม.นเรศวร </p>
+                <p class="about2">**สั่ง 5 แก้วขึ้นไป ส่งฟรี !</p>
+            </div>
     </section>
     <section class="menu" id="menu">
         <div class="headmenu">
             <div class="frist-menu">
-                <h1 class="fristtext-menu">Menu</h1>
+                <h1 class="fristtext-menu text-head">Menu</h1>
             </div>
         </div>
-        <div class="container">
-            <div class="food">
-                <div class="steak">
-                    <h1>Steak Menu</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-5">
+        <div class="container fristfood">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="food col-md-6">
+                        <h1>Food</h1> {% if all_product %}
+                        <div class="col-md-0">
                             <table class="table table-hover">
                                 <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
+                                    <th>Name</th>
+                                    <th>Subcategory</th>
+                                    <th>Price</th>
                                 </tr>
+                                {% for product in all_product %} {% if product.category == "1" %}
                                 <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.subCategory }}</td>
+                                    <td>{{ product.price }}</td>
                                 </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
+                                {% endif %} {% endfor %}
                             </table>
                         </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorem expedita, impedit sed voluptatum labore suscipit reprehenderit ducimus in et voluptas eligendi reiciendis ut earum hic. Fugiat numquam tempora aperiam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illo hic accusantium rerum sequi odio vitae dolores. Incidunt, odit unde maiores exercitationem blanditiis dicta. Quibusdam facere nulla aspernatur, porro quasi.</p>
+                        {% endif %}
+                    </div>
+                    <!-- เครื่องดื่ม-->
+                    <div class="drink col-md-6">
+                        <h1>Beverage</h1> {% if all_product %}
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Name</th>
+                                <th>Subcategory</th>
+                                <th>Price</th>
+                            </tr>
+                            {% for product in all_product %} {% if product.category == "3" %}
+                            <tr>
+                                <td>{{ product.name }}</td>
+                                <td>{{ product.subCategory }}</td>
+                                <td>{{ product.price }}</td>
+                            </tr>
+                            {% endif %} {% endfor %}
+                        </table>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- เครื่องดื่ม-->
+                <!-- ของหวาน-->
+                <!-- // ซ่อนตารางของหวาน //ทดลอง
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="sweet">
+                            <h1>Sweet</h1> {% if all_product %}
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Subcategory</th>
+                                    <th>Price</th>
+                                </tr>
+                                {% for product in all_product %} {% if product.category == "2" %}
+                                <tr>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.subCategory }}</td>
+                                    <td>{{ product.price }}</td>
+                                </tr>
+                                {% endif %} {% endfor %}
+                            </table>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
-                <div class="salad">
-                    <h1>Salad Menu</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorem expedita, impedit sed voluptatum labore suscipit reprehenderit ducimus in et voluptas eligendi reiciendis ut earum hic. Fugiat numquam tempora aperiam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illo hic accusantium rerum sequi odio vitae dolores. Incidunt, odit unde maiores exercitationem blanditiis dicta. Quibusdam facere nulla aspernatur, porro quasi.</p>
-                        </div>
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="steak">
-                    <h1>Steak Menu</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorem expedita, impedit sed voluptatum labore suscipit reprehenderit ducimus in et voluptas eligendi reiciendis ut earum hic. Fugiat numquam tempora aperiam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illo hic accusantium rerum sequi odio vitae dolores. Incidunt, odit unde maiores exercitationem blanditiis dicta. Quibusdam facere nulla aspernatur, porro quasi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="salad">
-                    <h1>Salad Menu</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorem expedita, impedit sed voluptatum labore suscipit reprehenderit ducimus in et voluptas eligendi reiciendis ut earum hic. Fugiat numquam tempora aperiam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illo hic accusantium rerum sequi odio vitae dolores. Incidunt, odit unde maiores exercitationem blanditiis dicta. Quibusdam facere nulla aspernatur, porro quasi.</p>
-                        </div>
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="drink">
-                <div class="coffee">
-                    <h1>Coffee</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="milk">
-                    <h1>Milk</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="soda">
-                    <h1>Soad</h1>
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-5">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Points</th>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>Griffin</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Lois</td>
-                                    <td>Griffin</td>
-                                    <td>$150</td>
-                                </tr>
-                                <tr>
-                                    <td>Joe</td>
-                                    <td>Swanson</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleveland</td>
-                                    <td>Brown</td>
-                                    <td>$250</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                -->
+                <!--ของหวาน-->
             </div>
         </div>
     </section>
     <section class="contact" id="contact">
         <div class="headcontact">
             <div class="frist-contact">
-                <h1 class="fristtext-contact">Contact</h1>
+                <h1 class="fristtext-contact text-head">Contact</h1>
             </div>
         </div>
         <div class="container">
             <div class="p-contact">
-                <div class="col-md-12">
-                    <div class="col-md-8">
-                        <iframe src="https://www.google.com/maps/d/embed?mid=1a4ZFuxh1TNhfIzege4Wk06zXKJ8" width="640" height="480"></iframe>
+                <div class="col-md-12 contact-under">
+                    <div class="col-md-8 col-xs-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d955.1201613469381!2d100.200222!3d16.752746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb10b344ab57a15f0!2sCoffee+Lovers+NU!5e0!3m2!1sen!2sth!4v1474396263916" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                     <div class="col-md-4">
-                        <p>ร้านกาแฟใกล้ ม.นเรศวร ประตู5 ซอยโลกีย์ จ.พิษณุโลก ที่อยู่ 342/31-32 หมู่7 ต.ท่าโพธิ์ อ.เมือง จ.พิษณุโลก 65000 เบอร์โทรศัพท์ 088-1604608 (เบนซ์) 086-3358350 (ฟ่ง) </p>
+                        <p class="c0">ร้าน Coffee Lovers NU </p>
+                        <p class="c1">แลนด์มาร์คอยู่ที่ ม.นเรศวร ประตู 5 ซอยโลกีย์</p>
+                        <a href="https://www.facebook.com/CoffeeloversNU/?fref=ts" class="123" target="_blank">
+                            <p class="c2"><img src="./images/icon/facebook.png" alt=""> Coffee Lovers NU</p>
+                        </a>
+                        <p class="c2 "><img src="./images/icon/smartphone.png" alt=""> 088-1604608 (เบนซ์)</p>
+                        <p class="c2"><img src="./images/icon/smartphone.png" alt=""> 086-3358350 (ฟ่ง) </p>
+                        <p class="c3"><img src="./images/icon/map-location.png" alt=""> 342/31-32 หมู่ 7 ตำบลท่าโพธิ์ อำเภอเมือง จังหวัดพิษณุโลก 6500</p>
                     </div>
                 </div>
             </div>
@@ -436,64 +173,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 cent">
-                    <div class="col-md-4">
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
+                    <div class="col-md-5">
+                        <ul class="text-life">
+                            <li>Coffee lovers@NU</li>
+                            <li>ที่อยู่ร้าน: </li>
+                            <li>342/31-32 หมู่ 7 ตำบลท่าโพธิ์ </li>
+                            <li>อำเภอเมือง จังหวัดพิษณุโลก 6500 </li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illum, reprehenderit quod mollitia, sunt ratione architecto beatae voluptatibus. Illum quas quaerat illo autem dicta voluptate similique mollitia saepe maiores placeat!
+                    <div class="col-md-3">
                     </div>
-                    <div class="col-md-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quaerat quasi eum porro, dolore nesciunt natus aliquid, tenetur, blanditiis unde cumque! Hic provident ducimus, laudantium? Tenetur laboriosam vero distinctio quis.
+                    <div class="col-md-4 text-right">
+                        <p>เบอร์โทรติดต่อ </p>
+                        <p>088-1604608 (เบนซ์)</p>
+                        <p>086-3358350 (ฟ่ง) </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <footer class="second">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 cent">
-                    <div class="col-md-4">
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illum, reprehenderit quod mollitia, sunt ratione
-                    </div>
-                    <div class="col-md-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quaerat quasi eum porro, dolore nesciunt natus
-                    </div>
-                </div>
+        <div class="col-md-12">
+            <div class="col-md-6 text-left">
+                <p class="footer-second-1">Note :: รูปสินค้าที่ใช้ในเว็บไซต์นี้ ใช้เพื่อการโฆษณาและสื่อถึงรสชาติของสินค้าเท่านั้น อาจมีการตกแต่งเพิ่มเติมเพื่อความสวยงาม</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p>&#169; Copyright Coffee lovers NU :: Develop By -
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">MKD@NU</button>
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content name-dev">
+                <p>57315312 นายปฐมพงศ์ ประกอบกิจเสรี</p>
+                <img src="./images/fight.jpg" class="img-circle" alt="" width="400px">
+                <p>57315497 นายภัทรพล เทียนทอง</p>
+                <img src="./images/tong.jpg" class="img-circle" alt="" width="400px">
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="./js/jquery-2.2.4.min.js"></script>
-    <script src="./js/bootstrap.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/scrips.js"></script>
-    <script src="./js/scripsadd.js"></script>
-    <script src="./js/materialize.min.js"></script>
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <!--
-    <script src="responsiveslides.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./js/parallax.js"></script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="responsiveslides.js"></script>
-    -->
-    <!-- Parallax
-    <script src="js/jquery.stellar-dist.js"></script>
-    <script src="js/jquery.nicescroll-dist.js"></script>
-    -->
 </body>
 
 </html>
